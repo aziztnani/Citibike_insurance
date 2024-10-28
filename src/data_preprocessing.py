@@ -84,3 +84,28 @@ def convert_citibike_zip_to_parquet(zip_path, parquet_output_path):
     all_stations.to_parquet(stations_output_path, index=False)
 
     print('Data conversion to parquet was successful')
+
+def load_parquet_in_spark(directory_path):
+    # Initialize Spark session
+    spark = SparkSession.builder.appName("CitiBikeAnalysis").getOrCreate()
+
+    # List to hold individual DataFrames
+    dataframes = []
+
+    # Iterate over each file in the directory
+    for filename in os.listdir(directory_path):
+        file_path = os.path.join(directory_path, filename)
+        try:
+            # Load each Parquet file individually and add to the list
+            df = spark.read.parquet(file_path)
+            dataframes.append(df)
+        except Exception as e:
+            print(f"Error reading {filename}: {e}")
+
+    combined_df = dataframes[0]
+    for df in dataframes[1:]:
+        combined_df = combined_df.union(df)
+
+
+    # Return the combined DataFrame
+    return combined_df
