@@ -4,6 +4,7 @@ from pyspark.sql.functions import month, count
 import pyspark.sql.functions as F
 import zipfile
 import os
+from sodapy import Socrata
 
 
 # Preprocesses each CSV's main data and returns cleaned data and extracted station info
@@ -109,3 +110,46 @@ def load_parquet_in_spark(directory_path):
 
     # Return the combined DataFrame
     return combined_df
+
+def fetch_data(data_id, app_token, sql_query=None, batch_size=10000, nb_datapoints=50000):
+    """
+    Fetches data from a Socrata API using an SQL-like query and returns it as a DataFrame.
+
+    Parameters:
+    - data_id (str): The dataset ID to query.
+    - app_token (str): The application token for the Socrata API.
+    - sql_query (str, optional): The full SQL-like query to run against the dataset.
+    - batch_size (int, optional): The number of records to retrieve in each batch (default is 10000).
+    - nb_datapoints (int, optional): The total number of records to retrieve across all batches (default is 50000).
+
+    Returns:
+    - pd.DataFrame: A DataFrame containing the concatenated records from all batches.
+    """
+    # Initialize Socrata client
+    client = Socrata("data.cityofnewyork.us", app_token)
+
+    # Calculate the number of iterations based on the batch size and total data points
+    num_batches = max(1, (nb_datapoints + batch_size - 1) // batch_size)
+
+    # Initialize an empty DataFrame
+    df_all = pd.DataFrame()
+
+    # Retrieve data in batches with the specified SQL query
+    for i in range(num_batches):
+        offset = i * batch_size
+        limit = min(batch_size, nb_datapoints - offset)
+        
+        # Add limit and offset to the SQL query if they're not present
+        query_with_limit_offset = f"{sql_query} LIMIT {limit} OFFSET {offset}"
+        
+        # Fetch data with the SQL query
+        response = client.get(data_id, query=query_with_limit_offset)
+
+        # Convert batch to DataFrame and append
+        df = pd.DataFrame.from_records(response)
+        df_all = pd.concat([df_all, df])
+
+    # Close the client
+    client.close()
+
+    return df_all
