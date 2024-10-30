@@ -38,17 +38,69 @@ def preprocess_citibike_data(df):
     
     return df, stations
 
-# Iterates through each CSV file in nested zips and yields DataFrames for processing
+# # Iterates through each CSV file in nested zips and yields DataFrames for processing
+# def load_and_extract_csvs(zip_path):
+#     with zipfile.ZipFile(zip_path, 'r') as main_zip:
+#         for inner_zip_name in main_zip.namelist():
+#             if inner_zip_name.endswith('.zip'):
+#                 with main_zip.open(inner_zip_name) as inner_zip_file:
+#                     with zipfile.ZipFile(inner_zip_file) as inner_zip:
+#                         for csv_filename in inner_zip.namelist():
+#                             if csv_filename.endswith('.csv'):
+#                                 with inner_zip.open(csv_filename) as csv_file:
+#                                     yield pd.read_csv(csv_file), csv_filename
+
 def load_and_extract_csvs(zip_path):
+    # Open the main zip file
     with zipfile.ZipFile(zip_path, 'r') as main_zip:
-        for inner_zip_name in main_zip.namelist():
-            if inner_zip_name.endswith('.zip'):
-                with main_zip.open(inner_zip_name) as inner_zip_file:
-                    with zipfile.ZipFile(inner_zip_file) as inner_zip:
-                        for csv_filename in inner_zip.namelist():
-                            if csv_filename.endswith('.csv'):
-                                with inner_zip.open(csv_filename) as csv_file:
-                                    yield pd.read_csv(csv_file), csv_filename
+        # Iterate through all files in the main zip
+        for file_name in main_zip.namelist():
+            # Skip any files in the _MACOSX directory
+            if '_MACOSX' in file_name:
+                continue
+            
+            if file_name.endswith('.csv'):
+                # Extract and read CSV directly if it's a CSV file
+                with main_zip.open(file_name) as csv_file:
+                    yield pd.read_csv(csv_file), file_name
+            elif file_name.endswith('.zip'):
+                # Try to process nested zips
+                with main_zip.open(file_name) as inner_zip_file:
+                    try:
+                        with zipfile.ZipFile(inner_zip_file) as inner_zip:
+                            for csv_filename in inner_zip.namelist():
+                                # Skip any files in the _MACOSX directory
+                                if '_MACOSX' in csv_filename:
+                                    continue
+                                
+                                if csv_filename.endswith('.csv'):
+                                    with inner_zip.open(csv_filename) as csv_file:
+                                        yield pd.read_csv(csv_file), csv_filename
+                    except zipfile.BadZipFile:
+                        print(f"Warning: {file_name} is not a valid zip file and will be skipped.")
+
+# import zipfile
+# import os
+# import pandas as pd
+
+# def load_all_csvs_in_zips(zip_path):
+#     # Function to recursively find and load all CSV files in nested zips
+#     def extract_csv_from_zip(zip_file):
+#         for inner_file in zip_file.namelist():
+#             if inner_file.endswith('.csv') and not inner_file.startswith('__MACOSX'):
+#                 # Extract and read CSV directly
+#                 with zip_file.open(inner_file) as csv_file:
+#                     yield pd.read_csv(csv_file), inner_file
+#             elif inner_file.endswith('.zip') and not inner_file.startswith('__MACOSX'):
+#                 # Process nested zip files
+#                 with zip_file.open(inner_file) as nested_zip_file:
+#                     with zipfile.ZipFile(nested_zip_file) as nested_zip:
+#                         yield from extract_csv_from_zip(nested_zip)
+
+#     # Open the main zip and start processing
+#     with zipfile.ZipFile(zip_path, 'r') as main_zip:
+#         yield from extract_csv_from_zip(main_zip)
+
 
 # Updates the consolidated station DataFrame to keep unique station IDs
 def update_stations(all_stations, new_stations):
@@ -59,11 +111,20 @@ def update_stations(all_stations, new_stations):
         'lng': 'median'
     }).reset_index()
 
-
 # Main function to control the overall workflow
 def convert_citibike_zip_to_parquet(zip_path, parquet_output_path):
     os.makedirs(parquet_output_path, exist_ok=True)
-    all_stations = pd.DataFrame(columns=['station_id', 'station_name', 'lat', 'lng'])
+    
+    # Define path for stations.parquet
+    stations_path = os.path.join(parquet_output_path, 'stations')
+    os.makedirs(stations_path, exist_ok=True)
+    stations_output_path = os.path.join(stations_path, 'stations.parquet')
+    
+    # Load existing stations data if available
+    if os.path.exists(stations_output_path):
+        all_stations = pd.read_parquet(stations_output_path)
+    else:
+        all_stations = pd.DataFrame(columns=['station_id', 'station_name', 'lat', 'lng'])
     
     # Iterate over each extracted CSV
     for csv_file, csv_filename in load_and_extract_csvs(zip_path):
@@ -78,10 +139,7 @@ def convert_citibike_zip_to_parquet(zip_path, parquet_output_path):
         # Update the consolidated stations DataFrame
         all_stations = update_stations(all_stations, new_stations)
     
-    # Save the consolidated stations information
-    stations_path = os.path.join(parquet_output_path, 'stations')
-    os.makedirs(stations_path, exist_ok=True)
-    stations_output_path = os.path.join(stations_path, 'stations.parquet')
+    # Save the updated consolidated stations information, overwriting if it exists
     all_stations.to_parquet(stations_output_path, index=False)
 
     print('Data conversion to parquet was successful')
