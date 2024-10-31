@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_906a13210ae8d8c4b544d162b0e14024 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_906a13210ae8d8c4b544d162b0e14024" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_906a13210ae8d8c4b544d162b0e14024 = L.map(
+                "map_906a13210ae8d8c4b544d162b0e14024",
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_553b3ee65b5bc8989c275dd033685bef = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_553b3ee65b5bc8989c275dd033685bef.addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+            var marker_aff573eb3a76190faf72fdb301261f5a = L.marker(
+                [40.76138, -73.98408],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_06fd294f4ba14a9bb34fb75f06f6c202 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7186602a58398adac06c280e1c1ffb3 = $(`<div id="html_e7186602a58398adac06c280e1c1ffb3" style="width: 100.0%; height: 100.0%;">Counter: Broadway at 50th St</div>`)[0];
+                popup_06fd294f4ba14a9bb34fb75f06f6c202.setContent(html_e7186602a58398adac06c280e1c1ffb3);
+            
+        
+
+        marker_aff573eb3a76190faf72fdb301261f5a.bindPopup(popup_06fd294f4ba14a9bb34fb75f06f6c202)
+        ;
+
+        
+    
+    
+            marker_aff573eb3a76190faf72fdb301261f5a.bindTooltip(
+                `<div>
+                     Broadway at 50th St
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e27a69b9c412803a56eaf22f7df0b43b = L.marker(
+                [40.742563, -73.9514924],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_8e38c8cf07f07fc1d893d5965c0d9279 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf8412130812aafed4b1981d799a9d9f = $(`<div id="html_cf8412130812aafed4b1981d799a9d9f" style="width: 100.0%; height: 100.0%;">Counter: Pulaski Bridge</div>`)[0];
+                popup_8e38c8cf07f07fc1d893d5965c0d9279.setContent(html_cf8412130812aafed4b1981d799a9d9f);
+            
+        
+
+        marker_e27a69b9c412803a56eaf22f7df0b43b.bindPopup(popup_8e38c8cf07f07fc1d893d5965c0d9279)
+        ;
+
+        
+    
+    
+            marker_e27a69b9c412803a56eaf22f7df0b43b.bindTooltip(
+                `<div>
+                     Pulaski Bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a78e998ad8a75537fa4b7f3ef2a36c10 = L.marker(
+                [40.857669036676, -73.8561540842056],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_d26c364e26ed1b987f5f27944fed12a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20d847169f81edae4d72b2b85ec48dd9 = $(`<div id="html_20d847169f81edae4d72b2b85ec48dd9" style="width: 100.0%; height: 100.0%;">Counter: Pelham Pkwy</div>`)[0];
+                popup_d26c364e26ed1b987f5f27944fed12a9.setContent(html_20d847169f81edae4d72b2b85ec48dd9);
+            
+        
+
+        marker_a78e998ad8a75537fa4b7f3ef2a36c10.bindPopup(popup_d26c364e26ed1b987f5f27944fed12a9)
+        ;
+
+        
+    
+    
+            marker_a78e998ad8a75537fa4b7f3ef2a36c10.bindTooltip(
+                `<div>
+                     Pelham Pkwy
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f4703f8f3ce0f327241670587cf99d95 = L.marker(
+                [40.714573, -73.99495],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_12e305785001fe7f04c5ac5877b0cf16 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8455625fe8f96c064c5ed454ca236b3 = $(`<div id="html_e8455625fe8f96c064c5ed454ca236b3" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge Ped Path</div>`)[0];
+                popup_12e305785001fe7f04c5ac5877b0cf16.setContent(html_e8455625fe8f96c064c5ed454ca236b3);
+            
+        
+
+        marker_f4703f8f3ce0f327241670587cf99d95.bindPopup(popup_12e305785001fe7f04c5ac5877b0cf16)
+        ;
+
+        
+    
+    
+            marker_f4703f8f3ce0f327241670587cf99d95.bindTooltip(
+                `<div>
+                     Manhattan Bridge Ped Path
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a66188705777e52a8853ef02069d2e8d = L.marker(
+                [40.7209591938344, -73.9609303061573],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_3ad9ce6beda8f069b01161a748532064 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_996443fc83f792ff9ba5540a4f768dfd = $(`<div id="html_996443fc83f792ff9ba5540a4f768dfd" style="width: 100.0%; height: 100.0%;">Counter: Kent Ave btw North 8th St and North 9th St</div>`)[0];
+                popup_3ad9ce6beda8f069b01161a748532064.setContent(html_996443fc83f792ff9ba5540a4f768dfd);
+            
+        
+
+        marker_a66188705777e52a8853ef02069d2e8d.bindPopup(popup_3ad9ce6beda8f069b01161a748532064)
+        ;
+
+        
+    
+    
+            marker_a66188705777e52a8853ef02069d2e8d.bindTooltip(
+                `<div>
+                     Kent Ave btw North 8th St and North 9th St
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_500fa0d9d649a8384d56f413ed5700e6 = L.marker(
+                [40.709274, -74.00099],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_689a6e3a2506c5d9d26190a3148ab7cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_61e71dfd19fb48fcfb5b818e0bcd4e93 = $(`<div id="html_61e71dfd19fb48fcfb5b818e0bcd4e93" style="width: 100.0%; height: 100.0%;">Counter: Brooklyn Bridge Bike Path</div>`)[0];
+                popup_689a6e3a2506c5d9d26190a3148ab7cc.setContent(html_61e71dfd19fb48fcfb5b818e0bcd4e93);
+            
+        
+
+        marker_500fa0d9d649a8384d56f413ed5700e6.bindPopup(popup_689a6e3a2506c5d9d26190a3148ab7cc)
+        ;
+
+        
+    
+    
+            marker_500fa0d9d649a8384d56f413ed5700e6.bindTooltip(
+                `<div>
+                     Brooklyn Bridge Bike Path
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_658f44404938149bdb95ed3211d9d906 = L.marker(
+                [40.7126563849457, -74.0044641553492],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_5f4b81cd184d7186bacb9cff0bd7683f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9dac97ec9d17e36a74c5a180f808f27c = $(`<div id="html_9dac97ec9d17e36a74c5a180f808f27c" style="width: 100.0%; height: 100.0%;">Counter: Brooklyn Bridge Bicycle Path (Roadway)</div>`)[0];
+                popup_5f4b81cd184d7186bacb9cff0bd7683f.setContent(html_9dac97ec9d17e36a74c5a180f808f27c);
+            
+        
+
+        marker_658f44404938149bdb95ed3211d9d906.bindPopup(popup_5f4b81cd184d7186bacb9cff0bd7683f)
+        ;
+
+        
+    
+    
+            marker_658f44404938149bdb95ed3211d9d906.bindTooltip(
+                `<div>
+                     Brooklyn Bridge Bicycle Path (Roadway)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de859f6704e78cdd0c590c2b5770b32d = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_6b154e5f43da5453c12a7d2e557966f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa7dc111d35471f9821621bcb532f74a = $(`<div id="html_aa7dc111d35471f9821621bcb532f74a" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge Interference Calibration 2019 Bike Counter</div>`)[0];
+                popup_6b154e5f43da5453c12a7d2e557966f5.setContent(html_aa7dc111d35471f9821621bcb532f74a);
+            
+        
+
+        marker_de859f6704e78cdd0c590c2b5770b32d.bindPopup(popup_6b154e5f43da5453c12a7d2e557966f5)
+        ;
+
+        
+    
+    
+            marker_de859f6704e78cdd0c590c2b5770b32d.bindTooltip(
+                `<div>
+                     Manhattan Bridge Interference Calibration 2019 Bike Counter
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b9930ca290234a3a5f5d8d977fbc08bc = L.marker(
+                [40.7112824326752, -73.9683860691382],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_a87fba604039183253b2f4dab2cff79e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44d1dfdd93d60952e06fbc420f1a4d0c = $(`<div id="html_44d1dfdd93d60952e06fbc420f1a4d0c" style="width: 100.0%; height: 100.0%;">Counter: Kent Ave btw South 6th St. and Broadway</div>`)[0];
+                popup_a87fba604039183253b2f4dab2cff79e.setContent(html_44d1dfdd93d60952e06fbc420f1a4d0c);
+            
+        
+
+        marker_b9930ca290234a3a5f5d8d977fbc08bc.bindPopup(popup_a87fba604039183253b2f4dab2cff79e)
+        ;
+
+        
+    
+    
+            marker_b9930ca290234a3a5f5d8d977fbc08bc.bindTooltip(
+                `<div>
+                     Kent Ave btw South 6th St. and Broadway
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_58be0eade805d742322d74ca63207cd3 = L.marker(
+                [40.6243031677402, -73.9706093072891],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_a5f64e67597aef51944866b97314b1ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_65bc8d001dbfb7fd9e035953c5877a58 = $(`<div id="html_65bc8d001dbfb7fd9e035953c5877a58" style="width: 100.0%; height: 100.0%;">Counter: Ocean Pkwy at Avenue J</div>`)[0];
+                popup_a5f64e67597aef51944866b97314b1ab.setContent(html_65bc8d001dbfb7fd9e035953c5877a58);
+            
+        
+
+        marker_58be0eade805d742322d74ca63207cd3.bindPopup(popup_a5f64e67597aef51944866b97314b1ab)
+        ;
+
+        
+    
+    
+            marker_58be0eade805d742322d74ca63207cd3.bindTooltip(
+                `<div>
+                     Ocean Pkwy at Avenue J
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d827252f9574582e9431888a007857a = L.marker(
+                [40.73971, -73.97954],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_65ff97c9f5204d2cea0359c812582ce4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20a9adf9f2a119b463bc29cb53b71e82 = $(`<div id="html_20a9adf9f2a119b463bc29cb53b71e82" style="width: 100.0%; height: 100.0%;">Counter: 2nd Avenue - 26th St S</div>`)[0];
+                popup_65ff97c9f5204d2cea0359c812582ce4.setContent(html_20a9adf9f2a119b463bc29cb53b71e82);
+            
+        
+
+        marker_3d827252f9574582e9431888a007857a.bindPopup(popup_65ff97c9f5204d2cea0359c812582ce4)
+        ;
+
+        
+    
+    
+            marker_3d827252f9574582e9431888a007857a.bindTooltip(
+                `<div>
+                     2nd Avenue - 26th St S
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3bc32cbc9e98c8acabb383354ea4312d = L.marker(
+                [40.7156230464414, -73.9947440799734],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_0c5b01aed855f6e954158e57d95beae4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4600634df06ee1f06fd151cbaf271737 = $(`<div id="html_4600634df06ee1f06fd151cbaf271737" style="width: 100.0%; height: 100.0%;">Counter: Forsyth Plaza</div>`)[0];
+                popup_0c5b01aed855f6e954158e57d95beae4.setContent(html_4600634df06ee1f06fd151cbaf271737);
+            
+        
+
+        marker_3bc32cbc9e98c8acabb383354ea4312d.bindPopup(popup_0c5b01aed855f6e954158e57d95beae4)
+        ;
+
+        
+    
+    
+            marker_3bc32cbc9e98c8acabb383354ea4312d.bindTooltip(
+                `<div>
+                     Forsyth Plaza
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f573bab689a2e538fe99dda3139453f0 = L.marker(
+                [40.699768, -73.98582],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_476d4c027f816c00c5e54246458b787f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_569ec7935790283aa4bfb1939b195a9a = $(`<div id="html_569ec7935790283aa4bfb1939b195a9a" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge 2013 to 2018 Bike Counter</div>`)[0];
+                popup_476d4c027f816c00c5e54246458b787f.setContent(html_569ec7935790283aa4bfb1939b195a9a);
+            
+        
+
+        marker_f573bab689a2e538fe99dda3139453f0.bindPopup(popup_476d4c027f816c00c5e54246458b787f)
+        ;
+
+        
+    
+    
+            marker_f573bab689a2e538fe99dda3139453f0.bindTooltip(
+                `<div>
+                     Manhattan Bridge 2013 to 2018 Bike Counter
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ca8afa05592def41fb0a8707696591d = L.marker(
+                [40.7623484382322, -73.9861203242579],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_ead816dcdffb0cb462ead48dacda533d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85c82a1bee7fc34682bd8cbac87ef9d8 = $(`<div id="html_85c82a1bee7fc34682bd8cbac87ef9d8" style="width: 100.0%; height: 100.0%;">Counter: 8th Ave at 50th St.</div>`)[0];
+                popup_ead816dcdffb0cb462ead48dacda533d.setContent(html_85c82a1bee7fc34682bd8cbac87ef9d8);
+            
+        
+
+        marker_0ca8afa05592def41fb0a8707696591d.bindPopup(popup_ead816dcdffb0cb462ead48dacda533d)
+        ;
+
+        
+    
+    
+            marker_0ca8afa05592def41fb0a8707696591d.bindTooltip(
+                `<div>
+                     8th Ave at 50th St.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b463164ab59cb18560875e89eb17cdc5 = L.marker(
+                [40.71053, -73.96145],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_f963fa025302875304f2894b61311103 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbdf973022c0b7f4fe87c9e44fa636de = $(`<div id="html_bbdf973022c0b7f4fe87c9e44fa636de" style="width: 100.0%; height: 100.0%;">Counter: Williamsburg Bridge Bike Path</div>`)[0];
+                popup_f963fa025302875304f2894b61311103.setContent(html_bbdf973022c0b7f4fe87c9e44fa636de);
+            
+        
+
+        marker_b463164ab59cb18560875e89eb17cdc5.bindPopup(popup_f963fa025302875304f2894b61311103)
+        ;
+
+        
+    
+    
+            marker_b463164ab59cb18560875e89eb17cdc5.bindTooltip(
+                `<div>
+                     Williamsburg Bridge Bike Path
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b9ad032317a74c5893a61e80dd44771 = L.marker(
+                [40.7877, -73.97505],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_26fefb958b4ef419b8f94b7d0e54898b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ea170662e96fd05bde2c6e74634e0a4 = $(`<div id="html_7ea170662e96fd05bde2c6e74634e0a4" style="width: 100.0%; height: 100.0%;">Counter: Columbus Ave at 86th St.</div>`)[0];
+                popup_26fefb958b4ef419b8f94b7d0e54898b.setContent(html_7ea170662e96fd05bde2c6e74634e0a4);
+            
+        
+
+        marker_5b9ad032317a74c5893a61e80dd44771.bindPopup(popup_26fefb958b4ef419b8f94b7d0e54898b)
+        ;
+
+        
+    
+    
+            marker_5b9ad032317a74c5893a61e80dd44771.bindTooltip(
+                `<div>
+                     Columbus Ave at 86th St.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e3c38e3dedb6f5bff1c427adca4f3db = L.marker(
+                [40.69981, -73.98589],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_5554f0bedaf871293dd0c2662707852a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9a9af95eea0c4378396eea53119a3bb = $(`<div id="html_a9a9af95eea0c4378396eea53119a3bb" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge 2012 Test Bike Counter</div>`)[0];
+                popup_5554f0bedaf871293dd0c2662707852a.setContent(html_a9a9af95eea0c4378396eea53119a3bb);
+            
+        
+
+        marker_2e3c38e3dedb6f5bff1c427adca4f3db.bindPopup(popup_5554f0bedaf871293dd0c2662707852a)
+        ;
+
+        
+    
+    
+            marker_2e3c38e3dedb6f5bff1c427adca4f3db.bindTooltip(
+                `<div>
+                     Manhattan Bridge 2012 Test Bike Counter
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_93cf9586ef8b0ec89edb360fee6b34c8 = L.marker(
+                [40.7877, -73.97505],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_7de2d762ac69441038f64c11d65e4ff6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0df99c5f87f81aafbe286ef0c5e87422 = $(`<div id="html_0df99c5f87f81aafbe286ef0c5e87422" style="width: 100.0%; height: 100.0%;">Counter: Amsterdam Ave at 86th St.</div>`)[0];
+                popup_7de2d762ac69441038f64c11d65e4ff6.setContent(html_0df99c5f87f81aafbe286ef0c5e87422);
+            
+        
+
+        marker_93cf9586ef8b0ec89edb360fee6b34c8.bindPopup(popup_7de2d762ac69441038f64c11d65e4ff6)
+        ;
+
+        
+    
+    
+            marker_93cf9586ef8b0ec89edb360fee6b34c8.bindTooltip(
+                `<div>
+                     Amsterdam Ave at 86th St.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83431434be598cad3d512f184a35056e = L.marker(
+                [40.69981, -73.98589],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_cc15ec7d733cc38ea578ac570f9bcd42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c45799ed5bbf9e3dc3bf2046fff9eb86 = $(`<div id="html_c45799ed5bbf9e3dc3bf2046fff9eb86" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge 2012 to 2019 Bike Counter</div>`)[0];
+                popup_cc15ec7d733cc38ea578ac570f9bcd42.setContent(html_c45799ed5bbf9e3dc3bf2046fff9eb86);
+            
+        
+
+        marker_83431434be598cad3d512f184a35056e.bindPopup(popup_cc15ec7d733cc38ea578ac570f9bcd42)
+        ;
+
+        
+    
+    
+            marker_83431434be598cad3d512f184a35056e.bindTooltip(
+                `<div>
+                     Manhattan Bridge 2012 to 2019 Bike Counter
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2af4d8729c2c1ff55171a05399591829 = L.marker(
+                [40.73883, -73.977165],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_2ef9aba3705629608566ddff674ccc55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf647adcf0317de7f152410d8e6e5094 = $(`<div id="html_cf647adcf0317de7f152410d8e6e5094" style="width: 100.0%; height: 100.0%;">Counter: 1st Avenue - 26th St N - Interference testing</div>`)[0];
+                popup_2ef9aba3705629608566ddff674ccc55.setContent(html_cf647adcf0317de7f152410d8e6e5094);
+            
+        
+
+        marker_2af4d8729c2c1ff55171a05399591829.bindPopup(popup_2ef9aba3705629608566ddff674ccc55)
+        ;
+
+        
+    
+    
+            marker_2af4d8729c2c1ff55171a05399591829.bindTooltip(
+                `<div>
+                     1st Avenue - 26th St N - Interference testing
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_69cc348b57a7e7c3f2f068a778fe788e = L.marker(
+                [40.75101, -73.94045],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_710465492105e3a40111b046f8b69c92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9536e423f7f35de7374afc957455d8b1 = $(`<div id="html_9536e423f7f35de7374afc957455d8b1" style="width: 100.0%; height: 100.0%;">Counter: Ed Koch Queensboro Bridge Shared Path</div>`)[0];
+                popup_710465492105e3a40111b046f8b69c92.setContent(html_9536e423f7f35de7374afc957455d8b1);
+            
+        
+
+        marker_69cc348b57a7e7c3f2f068a778fe788e.bindPopup(popup_710465492105e3a40111b046f8b69c92)
+        ;
+
+        
+    
+    
+            marker_69cc348b57a7e7c3f2f068a778fe788e.bindTooltip(
+                `<div>
+                     Ed Koch Queensboro Bridge Shared Path
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bc55ed8ddd0eb96d68a0ba0a6baeba5d = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_32fbc0a83995c37682032c799b517b6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f43c632579e8d86898b9d17e8251abfc = $(`<div id="html_f43c632579e8d86898b9d17e8251abfc" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge Interference Calibration 2018 Bike Counter</div>`)[0];
+                popup_32fbc0a83995c37682032c799b517b6e.setContent(html_f43c632579e8d86898b9d17e8251abfc);
+            
+        
+
+        marker_bc55ed8ddd0eb96d68a0ba0a6baeba5d.bindPopup(popup_32fbc0a83995c37682032c799b517b6e)
+        ;
+
+        
+    
+    
+            marker_bc55ed8ddd0eb96d68a0ba0a6baeba5d.bindTooltip(
+                `<div>
+                     Manhattan Bridge Interference Calibration 2018 Bike Counter
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d33e3800befb39fbcd8937934f7fa51c = L.marker(
+                [40.6712884581027, -73.9713816508519],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_7775196275746101d3d9cb12a8f47c4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0cb3e1d261c7b954b2d7309a56f09902 = $(`<div id="html_0cb3e1d261c7b954b2d7309a56f09902" style="width: 100.0%; height: 100.0%;">Counter: Prospect Park West</div>`)[0];
+                popup_7775196275746101d3d9cb12a8f47c4e.setContent(html_0cb3e1d261c7b954b2d7309a56f09902);
+            
+        
+
+        marker_d33e3800befb39fbcd8937934f7fa51c.bindPopup(popup_7775196275746101d3d9cb12a8f47c4e)
+        ;
+
+        
+    
+    
+            marker_d33e3800befb39fbcd8937934f7fa51c.bindTooltip(
+                `<div>
+                     Prospect Park West
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d58161e0d543f171da57935cebc4ae28 = L.marker(
+                [40.7156, -73.99475],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_b54d4429b0bcd5b21127bee533beaa66 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5437e420732696e9b12c5315d516990c = $(`<div id="html_5437e420732696e9b12c5315d516990c" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge Bike Comprehensive</div>`)[0];
+                popup_b54d4429b0bcd5b21127bee533beaa66.setContent(html_5437e420732696e9b12c5315d516990c);
+            
+        
+
+        marker_d58161e0d543f171da57935cebc4ae28.bindPopup(popup_b54d4429b0bcd5b21127bee533beaa66)
+        ;
+
+        
+    
+    
+            marker_d58161e0d543f171da57935cebc4ae28.bindTooltip(
+                `<div>
+                     Manhattan Bridge Bike Comprehensive
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0ea77a380e882f1b62b1e8b479bf3a0 = L.marker(
+                [40.7156, -73.99475],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_1cb50c1711de064afd19a25572d2e80d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae3296eea786b23c923a96292fd98ee7 = $(`<div id="html_ae3296eea786b23c923a96292fd98ee7" style="width: 100.0%; height: 100.0%;">Counter: Manhattan Bridge Display Bike Counter</div>`)[0];
+                popup_1cb50c1711de064afd19a25572d2e80d.setContent(html_ae3296eea786b23c923a96292fd98ee7);
+            
+        
+
+        marker_c0ea77a380e882f1b62b1e8b479bf3a0.bindPopup(popup_1cb50c1711de064afd19a25572d2e80d)
+        ;
+
+        
+    
+    
+            marker_c0ea77a380e882f1b62b1e8b479bf3a0.bindTooltip(
+                `<div>
+                     Manhattan Bridge Display Bike Counter
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6928a7939ca8cfefd25c5433f737b36 = L.marker(
+                [40.74563, -73.8525],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_9b145bb72ea00eed10717e4ed6cd24e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_896cd3e20ee0ddac223e44e3c504ef83 = $(`<div id="html_896cd3e20ee0ddac223e44e3c504ef83" style="width: 100.0%; height: 100.0%;">Counter: 111th St at 50th Ave</div>`)[0];
+                popup_9b145bb72ea00eed10717e4ed6cd24e5.setContent(html_896cd3e20ee0ddac223e44e3c504ef83);
+            
+        
+
+        marker_b6928a7939ca8cfefd25c5433f737b36.bindPopup(popup_9b145bb72ea00eed10717e4ed6cd24e5)
+        ;
+
+        
+    
+    
+            marker_b6928a7939ca8cfefd25c5433f737b36.bindTooltip(
+                `<div>
+                     111th St at 50th Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4d2cee214d7b027cd03ffcdd15f0fd20 = L.marker(
+                [40.84219, -73.93207],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_85ee77c2575bfa5e6468e43154b44b29 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1338d02f2d2655cd2c7ec81c136ad4cf = $(`<div id="html_1338d02f2d2655cd2c7ec81c136ad4cf" style="width: 100.0%; height: 100.0%;">Counter: High Bridge</div>`)[0];
+                popup_85ee77c2575bfa5e6468e43154b44b29.setContent(html_1338d02f2d2655cd2c7ec81c136ad4cf);
+            
+        
+
+        marker_4d2cee214d7b027cd03ffcdd15f0fd20.bindPopup(popup_85ee77c2575bfa5e6468e43154b44b29)
+        ;
+
+        
+    
+    
+            marker_4d2cee214d7b027cd03ffcdd15f0fd20.bindTooltip(
+                `<div>
+                     High Bridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ebe53a722157f21e0f377c371f0cff98 = L.marker(
+                [40.827664, -73.8850099],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_7c3ab948ebd643a57e83c4b6602675f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a05e624833da7381462231eed378f0cd = $(`<div id="html_a05e624833da7381462231eed378f0cd" style="width: 100.0%; height: 100.0%;">Counter: Concrete Plant Park</div>`)[0];
+                popup_7c3ab948ebd643a57e83c4b6602675f6.setContent(html_a05e624833da7381462231eed378f0cd);
+            
+        
+
+        marker_ebe53a722157f21e0f377c371f0cff98.bindPopup(popup_7c3ab948ebd643a57e83c4b6602675f6)
+        ;
+
+        
+    
+    
+            marker_ebe53a722157f21e0f377c371f0cff98.bindTooltip(
+                `<div>
+                     Concrete Plant Park
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87208cd2ab8ef20a9157ac422d3f3c73 = L.marker(
+                [40.643387, -74.072075],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_d4b3490973e85d61ecaf8a5986e6569d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b79d2f2ed722eed3e501bb7a6a019d96 = $(`<div id="html_b79d2f2ed722eed3e501bb7a6a019d96" style="width: 100.0%; height: 100.0%;">Counter: Staten Island Ferry</div>`)[0];
+                popup_d4b3490973e85d61ecaf8a5986e6569d.setContent(html_b79d2f2ed722eed3e501bb7a6a019d96);
+            
+        
+
+        marker_87208cd2ab8ef20a9157ac422d3f3c73.bindPopup(popup_d4b3490973e85d61ecaf8a5986e6569d)
+        ;
+
+        
+    
+    
+            marker_87208cd2ab8ef20a9157ac422d3f3c73.bindTooltip(
+                `<div>
+                     Staten Island Ferry
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4eb79fc9639b3997ff90bb3c9e3d54dd = L.marker(
+                [40.6556061827375, -73.8629511962948],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_dbce4408776dc84ef0c583de10c27539 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f51752d599636d41bcde939d3937febd = $(`<div id="html_f51752d599636d41bcde939d3937febd" style="width: 100.0%; height: 100.0%;">Counter: Fountain Ave</div>`)[0];
+                popup_dbce4408776dc84ef0c583de10c27539.setContent(html_f51752d599636d41bcde939d3937febd);
+            
+        
+
+        marker_4eb79fc9639b3997ff90bb3c9e3d54dd.bindPopup(popup_dbce4408776dc84ef0c583de10c27539)
+        ;
+
+        
+    
+    
+            marker_4eb79fc9639b3997ff90bb3c9e3d54dd.bindTooltip(
+                `<div>
+                     Fountain Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bf41909b36c259b5a9ae260b535c3d3c = L.marker(
+                [40.5841, -73.93099],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_7b6565fc5135f9d1d43a9e5d4a71a967 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb0c798f3b92c8ec692f50b42b2a322f = $(`<div id="html_eb0c798f3b92c8ec692f50b42b2a322f" style="width: 100.0%; height: 100.0%;">Counter: Emmons Ave</div>`)[0];
+                popup_7b6565fc5135f9d1d43a9e5d4a71a967.setContent(html_eb0c798f3b92c8ec692f50b42b2a322f);
+            
+        
+
+        marker_bf41909b36c259b5a9ae260b535c3d3c.bindPopup(popup_7b6565fc5135f9d1d43a9e5d4a71a967)
+        ;
+
+        
+    
+    
+            marker_bf41909b36c259b5a9ae260b535c3d3c.bindTooltip(
+                `<div>
+                     Emmons Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87c14910d85c86ddf8d33710611fb39b = L.marker(
+                [40.8070462909676, -73.9243930579323],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_e38be989de53f64ce1c422a0354b1af2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e046a6f6567e938f7114d7a0e012ea58 = $(`<div id="html_e046a6f6567e938f7114d7a0e012ea58" style="width: 100.0%; height: 100.0%;">Counter: Willis Ave Peds</div>`)[0];
+                popup_e38be989de53f64ce1c422a0354b1af2.setContent(html_e046a6f6567e938f7114d7a0e012ea58);
+            
+        
+
+        marker_87c14910d85c86ddf8d33710611fb39b.bindPopup(popup_e38be989de53f64ce1c422a0354b1af2)
+        ;
+
+        
+    
+    
+            marker_87c14910d85c86ddf8d33710611fb39b.bindTooltip(
+                `<div>
+                     Willis Ave Peds
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9114b7e4e18cbd6d0d38d4f64d0f12fb = L.marker(
+                [40.5841, -73.93099],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_f267ac5b5fb1054422ca7d5bc224d4eb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98a6eba81a7260a1707a7995bfb693c1 = $(`<div id="html_98a6eba81a7260a1707a7995bfb693c1" style="width: 100.0%; height: 100.0%;">Counter: Emmons Ave Bikes</div>`)[0];
+                popup_f267ac5b5fb1054422ca7d5bc224d4eb.setContent(html_98a6eba81a7260a1707a7995bfb693c1);
+            
+        
+
+        marker_9114b7e4e18cbd6d0d38d4f64d0f12fb.bindPopup(popup_f267ac5b5fb1054422ca7d5bc224d4eb)
+        ;
+
+        
+    
+    
+            marker_9114b7e4e18cbd6d0d38d4f64d0f12fb.bindTooltip(
+                `<div>
+                     Emmons Ave Bikes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5fbf4c637062f240d929f6a625416426 = L.marker(
+                [40.84219, -73.93207],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_d2fba84aea8af3c6cad8d78a4e9e4f4e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88f2205f12dd785f96cb397b0f54b1cd = $(`<div id="html_88f2205f12dd785f96cb397b0f54b1cd" style="width: 100.0%; height: 100.0%;">Counter: High Bridge Bikes</div>`)[0];
+                popup_d2fba84aea8af3c6cad8d78a4e9e4f4e.setContent(html_88f2205f12dd785f96cb397b0f54b1cd);
+            
+        
+
+        marker_5fbf4c637062f240d929f6a625416426.bindPopup(popup_d2fba84aea8af3c6cad8d78a4e9e4f4e)
+        ;
+
+        
+    
+    
+            marker_5fbf4c637062f240d929f6a625416426.bindTooltip(
+                `<div>
+                     High Bridge Bikes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ef721c9161fbb5ba1213475a00e8b92b = L.marker(
+                [40.827664, -73.8850099],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_9c037c92163ca216dedf7074c7645d67 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c8ab24dc46d3be87ef7dc3a41765000 = $(`<div id="html_4c8ab24dc46d3be87ef7dc3a41765000" style="width: 100.0%; height: 100.0%;">Counter: Concrete Plant Park Bikes</div>`)[0];
+                popup_9c037c92163ca216dedf7074c7645d67.setContent(html_4c8ab24dc46d3be87ef7dc3a41765000);
+            
+        
+
+        marker_ef721c9161fbb5ba1213475a00e8b92b.bindPopup(popup_9c037c92163ca216dedf7074c7645d67)
+        ;
+
+        
+    
+    
+            marker_ef721c9161fbb5ba1213475a00e8b92b.bindTooltip(
+                `<div>
+                     Concrete Plant Park Bikes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_952424fba3f8237993aed748e9bd4b55 = L.marker(
+                [40.827664, -73.8850099],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_23c23a5832abdcf67418aae51b60e3dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca4f25e1337c7d61aa71eea191e0aca6 = $(`<div id="html_ca4f25e1337c7d61aa71eea191e0aca6" style="width: 100.0%; height: 100.0%;">Counter: Concrete Plant Park Peds</div>`)[0];
+                popup_23c23a5832abdcf67418aae51b60e3dd.setContent(html_ca4f25e1337c7d61aa71eea191e0aca6);
+            
+        
+
+        marker_952424fba3f8237993aed748e9bd4b55.bindPopup(popup_23c23a5832abdcf67418aae51b60e3dd)
+        ;
+
+        
+    
+    
+            marker_952424fba3f8237993aed748e9bd4b55.bindTooltip(
+                `<div>
+                     Concrete Plant Park Peds
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0780b328cc0d5c577475a91d3c05a7f0 = L.marker(
+                [40.84219, -73.93207],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_97d71609c301231ea901c72d542d75b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_793901a6f6fbfd983fdc597de539c0f6 = $(`<div id="html_793901a6f6fbfd983fdc597de539c0f6" style="width: 100.0%; height: 100.0%;">Counter: High Bridge Peds</div>`)[0];
+                popup_97d71609c301231ea901c72d542d75b1.setContent(html_793901a6f6fbfd983fdc597de539c0f6);
+            
+        
+
+        marker_0780b328cc0d5c577475a91d3c05a7f0.bindPopup(popup_97d71609c301231ea901c72d542d75b1)
+        ;
+
+        
+    
+    
+            marker_0780b328cc0d5c577475a91d3c05a7f0.bindTooltip(
+                `<div>
+                     High Bridge Peds
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2af35357c17a7386a59212f1292f37d1 = L.marker(
+                [40.8070462909676, -73.9243930579323],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_1796b8f25acdfa04a5eeee0e00e5d76f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e74f323331d0cb3d51b46600ce0cb7f = $(`<div id="html_0e74f323331d0cb3d51b46600ce0cb7f" style="width: 100.0%; height: 100.0%;">Counter: Willis Ave</div>`)[0];
+                popup_1796b8f25acdfa04a5eeee0e00e5d76f.setContent(html_0e74f323331d0cb3d51b46600ce0cb7f);
+            
+        
+
+        marker_2af35357c17a7386a59212f1292f37d1.bindPopup(popup_1796b8f25acdfa04a5eeee0e00e5d76f)
+        ;
+
+        
+    
+    
+            marker_2af35357c17a7386a59212f1292f37d1.bindTooltip(
+                `<div>
+                     Willis Ave
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8e7f73d243e29c1848dbd9f1bea21803 = L.marker(
+                [40.7116442753966, -74.0041094515003],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_ca3beef39ccfd30ab9eb192c68409ab8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_134008a05b98624ca5ace7322355cadd = $(`<div id="html_134008a05b98624ca5ace7322355cadd" style="width: 100.0%; height: 100.0%;">Counter: Comprehensive Brooklyn Bridge Counter</div>`)[0];
+                popup_ca3beef39ccfd30ab9eb192c68409ab8.setContent(html_134008a05b98624ca5ace7322355cadd);
+            
+        
+
+        marker_8e7f73d243e29c1848dbd9f1bea21803.bindPopup(popup_ca3beef39ccfd30ab9eb192c68409ab8)
+        ;
+
+        
+    
+    
+            marker_8e7f73d243e29c1848dbd9f1bea21803.bindTooltip(
+                `<div>
+                     Comprehensive Brooklyn Bridge Counter
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78b05b1f12dd4d11b2245a03a6828ef4 = L.marker(
+                [40.8070462909676, -73.9243930579323],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_163eb10f6edfb3814c89e92c263d94e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8179be9ce365febb64b1a19abc3c4f1c = $(`<div id="html_8179be9ce365febb64b1a19abc3c4f1c" style="width: 100.0%; height: 100.0%;">Counter: Willis Ave Bikes</div>`)[0];
+                popup_163eb10f6edfb3814c89e92c263d94e6.setContent(html_8179be9ce365febb64b1a19abc3c4f1c);
+            
+        
+
+        marker_78b05b1f12dd4d11b2245a03a6828ef4.bindPopup(popup_163eb10f6edfb3814c89e92c263d94e6)
+        ;
+
+        
+    
+    
+            marker_78b05b1f12dd4d11b2245a03a6828ef4.bindTooltip(
+                `<div>
+                     Willis Ave Bikes
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d98849944338f5a3d782a728b90a4115 = L.marker(
+                [40.5841, -73.93099],
+                {}
+            ).addTo(map_906a13210ae8d8c4b544d162b0e14024);
+        
+    
+        var popup_85087cf4b7241c4e70375d75008dc22e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d677562af1df5c15285d9da11ced8985 = $(`<div id="html_d677562af1df5c15285d9da11ced8985" style="width: 100.0%; height: 100.0%;">Counter: Emmons Ave Peds</div>`)[0];
+                popup_85087cf4b7241c4e70375d75008dc22e.setContent(html_d677562af1df5c15285d9da11ced8985);
+            
+        
+
+        marker_d98849944338f5a3d782a728b90a4115.bindPopup(popup_85087cf4b7241c4e70375d75008dc22e)
+        ;
+
+        
+    
+    
+            marker_d98849944338f5a3d782a728b90a4115.bindTooltip(
+                `<div>
+                     Emmons Ave Peds
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
